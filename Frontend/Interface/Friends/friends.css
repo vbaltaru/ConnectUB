@@ -1,0 +1,327 @@
+/* Setări globale & Sidebar (Neschimbat) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f5f6fa;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  color: #1e293b;
+}
+:root {
+  --primary-purple: #8b70f9;
+  --text-dark: #1e293b;
+  --text-grey: #64748b;
+  --bg-grey: #f8fafc;
+  --border-color: #e2e8f0;
+  --danger-red: #ef4444;
+  --success-green: #22c55e;
+}
+
+/* Main Content & Header */
+.main-container {
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.friends-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-title h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.header-subtitle {
+  color: var(--text-grey);
+  margin-top: 5px;
+}
+
+/* BUTON FIND FRIENDS (NOU) */
+.btn-find-friends {
+  background-color: var(--primary-purple);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(139, 112, 249, 0.3);
+}
+.btn-find-friends:hover {
+  background-color: #7c60e8;
+  transform: translateY(-2px);
+}
+
+/* Sections & Grid */
+.section-title {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 30px 0;
+}
+.badge-count {
+  background-color: var(--primary-purple);
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.friends-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+/* Cards Styles */
+.friend-card,
+.request-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.friend-card:hover,
+.request-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  border-color: transparent;
+}
+.friend-avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e3f2fd;
+  color: var(--primary-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.friend-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+}
+.friend-email {
+  color: var(--text-grey);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.friend-actions {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.btn-friend-action {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+.btn-accept {
+  background-color: var(--success-green);
+  color: white;
+}
+.btn-accept:hover {
+  background-color: #16a34a;
+}
+.btn-reject {
+  background-color: var(--bg-grey);
+  color: var(--text-grey);
+}
+.btn-reject:hover {
+  background-color: #fee2e2;
+  color: var(--danger-red);
+}
+.btn-message {
+  background-color: var(--primary-purple);
+  color: white;
+}
+.btn-message:hover {
+  background-color: #7c60e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 112, 249, 0.3);
+}
+
+/* === MODAL STYLES (General) === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+.modal-overlay.show .modal-content {
+  transform: translateY(0);
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.modal-header h2 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-grey);
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+.btn-icon:hover {
+  background-color: var(--bg-grey);
+  color: var(--danger-red);
+}
+
+/* === SEARCH MODAL SPECIFIC STYLES (NOU) === */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-grey);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+}
+.search-icon {
+  color: var(--text-grey);
+  margin-right: 10px;
+}
+#userSearchInput {
+  border: none;
+  background: none;
+  flex-grow: 1;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+}
+.search-results-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.search-placeholder {
+  text-align: center;
+  color: var(--text-grey);
+  margin-top: 50px;
+}
+
+/* Rezultat Căutare Item */
+.search-result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: border-color 0.2s;
+}
+.search-result-item:hover {
+  border-color: var(--primary-purple);
+}
+.search-user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.search-avatar-small {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #e3f2fd;
+  color: var(--primary-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.btn-add-friend {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--bg-grey);
+  color: var(--text-dark);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+}
+.btn-add-friend:hover {
+  background-color: var(--primary-purple);
+  color: white;
+}
+/* Stil pentru când cererea e trimisă */
+.btn-add-friend.sent {
+  background-color: var(--success-green);
+  color: white;
+  cursor: default;
+  pointer-events: none;
+}

@@ -1,0 +1,141 @@
+/* CHAT MAIN CONTAINER */
+.chat-main-container {
+  flex: 1;
+  display: flex;
+  margin: 20px; /* Margini de 20px sus, jos, stânga, dreapta */
+  background: #ffffff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* LISTA DE CHATURI (STÂNGA) */
+.chat-sidebar {
+  width: 320px;
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+.chat-sidebar-header {
+  padding: 25px;
+  border-bottom: 1px solid var(--border-color);
+}
+.friends-list-scroll {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.friend-chat-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.friend-chat-item:hover {
+  background-color: #f8fafc;
+}
+.friend-chat-item.active {
+  background-color: #f1f0ff;
+  border-right: 4px solid var(--primary-purple);
+}
+
+.avatar-circle-sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: var(--primary-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* FEREASTRA CHAT (DREAPTA) */
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fcfcfd;
+}
+#activeChatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.messages-display {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.msg {
+  max-width: 70%;
+  padding: 10px 16px;
+  border-radius: 18px;
+  font-size: 0.95rem;
+  position: relative;
+}
+.msg.sent {
+  align-self: flex-end;
+  background: var(--primary-purple);
+  color: #fff;
+  border-bottom-right-radius: 2px;
+}
+.msg.received {
+  align-self: flex-start;
+  background: #fff;
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  border-bottom-left-radius: 2px;
+}
+
+.msg-time {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-top: 5px;
+  display: block;
+  text-align: right;
+}
+
+.chat-input-container {
+  padding: 20px;
+  background: #fff;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: 10px;
+}
+#messageInput {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid var(--border-color);
+  outline: none;
+}
+#sendBtn {
+  background: var(--primary-purple);
+  color: #fff;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-chat-placeholder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+}

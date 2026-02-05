@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule - StudentHub</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="/Interface/global.css" />
+    <link rel="stylesheet" href="/Interface/Schedule/style_schedule.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-principal">
+        <img src="/Images/logo.png" id="logo" alt="StudentHub Logo" />
+        <a href="/dashboard" class="nav-link"
+          ><span class="material-symbols-rounded">space_dashboard</span
+          ><span class="nav_label">Dashboard</span></a
+        >
+        <a href="/schedule" class="nav-link active-page"
+          ><span class="material-symbols-rounded">calendar_today</span
+          ><span class="nav_label">Schedule</span></a
+        >
+        <a href="/tasks" class="nav-link"
+          ><span class="material-symbols-rounded">task_alt</span
+          ><span class="nav_label">Tasks</span></a
+        >
+        <a href="/friends" class="nav-link"
+          ><span class="material-symbols-rounded">group</span
+          ><span class="nav_label">Friends</span></a
+        >
+        <a href="/messages" class="nav-link"
+          ><span class="material-symbols-rounded">chat_bubble</span
+          ><span class="nav_label">Messages</span></a
+        >
+       
+      </div>
+      <div id="sidebar-secundar">
+        <a href="/settings" class="nav-link"
+          ><span class="material-symbols-rounded">settings</span
+          ><span class="nav_label">Settings</span></a
+        >
+        <a href="/login" class="nav-link"
+          ><span class="material-symbols-rounded">logout</span
+          ><span class="nav_label">Log out</span></a
+        >
+      </div>
+    </div>
+
+    <main class="main-content">
+      <header
+        class="schedule-header"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <h1>Weekly Schedule</h1>
+          <p class="header-subtitle">
+            Your classes at a glance (07:00 - 19:00).
+          </p>
+        </div>
+        <button class="btn-add-event">
+          <span class="material-symbols-rounded">add</span>Add Class
+        </button>
+      </header>
+
+      <div class="schedule-container-scroll">
+        <div class="schedule-grid">
+          <div class="grid-header time-col">Time</div>
+          <div class="grid-header">Monday</div>
+          <div class="grid-header">Tuesday</div>
+          <div class="grid-header">Wednesday</div>
+          <div class="grid-header">Thursday</div>
+          <div class="grid-header">Friday</div>
+          <div class="grid-header">Saturday</div>
+          <div class="grid-header">Sunday</div>
+
+          <div class="grid-time-label">07:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="07:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="07:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="07:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="07:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="07:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="07:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="07:00:00"></div>
+          <div class="grid-time-label">08:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="08:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="08:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="08:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="08:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="08:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="08:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="08:00:00"></div>
+          <div class="grid-time-label">09:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="09:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="09:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="09:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="09:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="09:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="09:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="09:00:00"></div>
+          <div class="grid-time-label">10:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="10:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="10:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="10:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="10:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="10:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="10:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="10:00:00"></div>
+          <div class="grid-time-label">11:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="11:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="11:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="11:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="11:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="11:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="11:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="11:00:00"></div>
+          <div class="grid-time-label">12:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="12:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="12:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="12:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="12:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="12:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="12:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="12:00:00"></div>
+          <div class="grid-time-label">13:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="13:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="13:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="13:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="13:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="13:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="13:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="13:00:00"></div>
+          <div class="grid-time-label">14:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="14:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="14:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="14:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="14:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="14:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="14:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="14:00:00"></div>
+          <div class="grid-time-label">15:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="15:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="15:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="15:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="15:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="15:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="15:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="15:00:00"></div>
+          <div class="grid-time-label">16:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="16:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="16:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="16:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="16:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="16:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="16:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="16:00:00"></div>
+          <div class="grid-time-label">17:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="17:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="17:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="17:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="17:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="17:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="17:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="17:00:00"></div>
+          <div class="grid-time-label">18:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="18:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="18:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="18:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="18:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="18:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="18:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="18:00:00"></div>
+          <div class="grid-time-label">19:00</div>
+          <div class="grid-cell" data-day="Monday" data-time="19:00:00"></div>
+          <div class="grid-cell" data-day="Tuesday" data-time="19:00:00"></div>
+          <div
+            class="grid-cell"
+            data-day="Wednesday"
+            data-time="19:00:00"
+          ></div>
+          <div class="grid-cell" data-day="Thursday" data-time="19:00:00"></div>
+          <div class="grid-cell" data-day="Friday" data-time="19:00:00"></div>
+          <div class="grid-cell" data-day="Saturday" data-time="19:00:00"></div>
+          <div class="grid-cell" data-day="Sunday" data-time="19:00:00"></div>
+        </div>
+      </div>
+    </main>
+
+    <div id="addEventModal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add New Class</h2>
+          <button id="closeModalBtn" class="btn-icon">
+            <span class="material-symbols-rounded">close</span>
+          </button>
+        </div>
+        <form id="modalEventForm">
+          <div class="input-group">
+            <label for="eventName"
+              >Class Name <span style="color: var(--danger-red)">*</span></label
+            ><input
+              type="text"
+              id="eventName"
+              required
+              placeholder="e.g., Advanced Math"
+            />
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <label for="eventDay"
+                >Day <span style="color: var(--danger-red)">*</span></label
+              >
+              <select id="eventDay" required>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="eventTime"
+                >Start Time
+                <span style="color: var(--danger-red)">*</span></label
+              ><input
+                type="time"
+                id="eventTime"
+                required
+                min="07:00"
+                max="19:00"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="teacherName">Teacher Name</label
+            ><input
+              type="text"
+              id="teacherName"
+              placeholder="e.g., Prof. Johnson"
+            />
+          </div>
+          <div class="input-group">
+            <label for="eventLocation">Location</label
+            ><input
+              type="text"
+              id="eventLocation"
+              placeholder="e.g., Room 301"
+            />
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn-cancel" id="cancelBtn">
+              Cancel</button
+            ><button type="submit" class="btn-submit">Add to Schedule</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/Interface/Schedule/schedule.js"></script>
+  </body>
+</html>

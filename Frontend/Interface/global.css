@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-purple: #8b70f9;
+  --text-dark: #1e293b;
+  --text-grey: #64748b;
+  --bg-light: #f5f6fa;
+  --border-color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-light);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex; /* Esențial pentru ca sidebar-ul să stea în stânga */
+  overflow: hidden;
+}
+
+/* --- SIDEBAR STYLING --- */
+.sidebar {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  padding: 20px;
+  margin: 20px 0 20px 20px;
+  border-radius: 25px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+#logo {
+  width: 150px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+}
+.sidebar-principal {
+  flex-grow: 1;
+}
+
+#sidebar-secundar {
+  margin-top: auto;
+}
+
+.nav-link {
+  color: var(--text-grey);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border-radius: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #f1f5f9;
+  color: var(--primary-purple);
+}
+.nav-link.active-page {
+  background-color: var(--primary-purple);
+  color: #ffffff;
+}
+
+/* Container generic pentru conținutul paginii (opțional pentru alte pagini) */
+.main-container {
+  flex: 1;
+  margin: 20px;
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}

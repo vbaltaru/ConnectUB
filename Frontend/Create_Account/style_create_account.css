@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.split-container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-side {
+  position: relative;
+  flex: 0 0 50%;
+  background: #4f2dd6;
+  background: linear-gradient(
+    55deg,
+    rgba(79, 45, 214, 1) 17%,
+    rgba(97, 58, 252, 1) 48%,
+    rgba(142, 123, 219, 1) 84%,
+    rgba(196, 181, 253, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+#Logo {
+  max-width: 350px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: #1e293b;
+  filter: drop-shadow(0 0px 2px rgba(0, 0, 0, 0.2));
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  color: #1e293b;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  color: #2f3d55;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  color: #2f3d55;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.right-side {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.signup-container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.welcome-section h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  font-size: 16px;
+  color: #666;
+}
+
+.signup-form {
+  width: 100%;
+}
+
+.name-fields {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 0px;
+}
+
+.name-fields .form-group {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 3px rgba(139, 112, 249, 0.1);
+}
+
+.signup-btn,
+.sava_profile-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(
+    55deg,
+    rgba(97, 58, 252, 1) 6%,
+    rgba(151, 127, 250, 1) 67%
+  );
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 24px;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 112, 249, 0.3);
+}
+
+.sava_profile-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 112, 249, 0.3);
+}
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 25px 0;
+  color: #666;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider span {
+  background: white;
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-btn:hover {
+  background: #f8f9fa;
+  border-color: #ccc;
+}
+
+.google-btn {
+  color: #333;
+}
+
+.facebook-btn {
+  color: #1877f2;
+  border-color: #1877f2;
+}
+
+.facebook-btn:hover {
+  background: #1877f2;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .name-fields {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .welcome-section h1 {
+    font-size: 28px;
+  }
+}
+
+.profile-image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px; /* Spatiu sub element */
+}
+
+.upload-area {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Face elementul circular */
+  background-color: #f0f0f5; /* Un gri foarte deschis */
+  border: 2px dashed #8b70f9; /* Border dashed pentru a sugera o zona de drop/upload */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Indica ca este clickabil */
+  transition: background-color 0.3s ease; /* Efect de tranzitie la hover */
+  overflow: hidden; /* Asigura ca imaginea de previzualizare nu depaseste cercul */
+  position: relative;
+}
+
+.upload-area:hover {
+  background-color: #e0e0e5; /* Culoare mai inchisa la hover */
+}
+
+.upload-icon {
+  color: #8b70f9; /* Culoarea iconitei */
+  margin-bottom: 8px;
+}
+
+.upload-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.upload-text {
+  color: #8b70f9;
+  font-size: 10px;
+  text-align: center;
+}
+
+#profileImagePreview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asigura ca imaginea umple cercul fara a fi distorsionata */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%; /* Pentru a masca colturile imaginii */
+}
+
+/* Stiluri de baza pentru formular, asigurand consistenta */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555; /* Culoare de text pentru etichete */
+  font-weight: 500;
+}
+
+/* Stiluri specifice pentru selectorul de gen */
+.select-wrapper {
+  position: relative;
+  width: 100%; /* Ocupa toata latimea disponibila */
+}
+
+.form-select {
+  width: 100%;
+  padding: 12px 15px;
+  padding-right: 40px; /* Spatiu pentru iconita de sageata */
+  border: 1px solid #e0e0e0; /* O bordura subtila */
+  border-radius: 8px; /* Colțuri rotunjite */
+  background-color: #fff; /* Fundal alb */
+  font-size: 16px;
+  color: #333;
+  -webkit-appearance: none; /* Ascunde sageata nativa a browser-ului pe Webkit */
+  -moz-appearance: none; /* Ascunde sageata nativa a browser-ului pe Mozilla */
+  appearance: none; /* Ascunde sageata nativa a browser-ului */
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); /* Umbra subtila */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-select:focus {
+  border-color: #7a42f5; /* Culoarea de accent la focus */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(122, 66, 245, 0.2); /* Umbra de focus mai pronuntata */
+}
+
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Asigura ca click-ul trece prin sageata la select */
+  color: #8e8e99; /* Culoarea iconitei */
+}
+
+.sava_profile-btn{
+    margin-top: 15px;
+}

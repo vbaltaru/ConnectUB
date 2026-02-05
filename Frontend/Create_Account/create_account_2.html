@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Create_Account/style_create_account.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="split-container">
+      <div class="left-side">
+        <div id="logo-motto">
+          <div id="logo">
+            <img id="Logo" src="/Images/logo.png" alt="ConnectUB Logo" />
+          </div>
+          <div id="Motto">
+            <h1>
+              <h1>Set Up Your Profile.</h1>
+              <h2>Get Connected</h2>
+              <h3>Tell us more about yourself to</h3>
+              <h4>start collaborating and chatting with your peers.</h4>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="signup-container">
+          <div class="welcome-section">
+            <h1>Complete Your Profile</h1>
+          </div>
+          <div class="profile-image-upload-container">
+            <input
+              type="file"
+              id="profileImageUpload"
+              accept="image/*"
+              style="display: none"
+            />
+            <label for="profileImageUpload" class="upload-area">
+              <div class="upload-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-upload"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+              </div>
+              <img
+                id="profileImagePreview"
+                src=""
+                alt="Previzualizare profil"
+                style="display: none"
+              />
+              <span class="upload-text">Upload Profile Image</span>
+            </label>
+          </div>
+          <form class="signup-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                id="year"
+                placeholder="Year of Studies"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="Speci"
+                placeholder="Specialization"
+                required
+              />
+            </div>
+
+            <div class="select-wrapper">
+              <select id="gender" name="gender" class="form-select">
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
+              </select>
+              <span class="select-arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-chevron-down"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </div>
+          </form>
+          <button type="submit" class="sava_profile-btn">Save Profile</button>
+        </div>
+      </div>
+    </div>
+    <script src="/Frontend/Create_Account/create_account_2.js"></script>
+  </body>
+</html>
